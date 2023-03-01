@@ -1,6 +1,6 @@
 import unittest
-from main.node import Node
-from main.stack import Stack
+from utils.node import Node
+from utils.stack import Stack
 
 
 class test_Node(unittest.TestCase):
@@ -20,10 +20,11 @@ class test_Stack(unittest.TestCase):
         self.test_data = 'data1'
 
     def test_init(self):
-        self.assertEqual((self.A[0],self.A[1]), (5, None))
-"""
+        self.assertEqual(self.A, (5, None))
+
     def test_push(self):
-"""
+        self.assertEqual(self.test_data, 'data1')
+
 
 
 if __name__ == '__main__':

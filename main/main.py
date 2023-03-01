@@ -1,7 +1,5 @@
-
-
-
-
+from node import Node
+from stack import Stack
 
 
 n1 = Node(5, None)

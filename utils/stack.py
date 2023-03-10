@@ -9,17 +9,14 @@ class Stack:
     """
 
     def __init__(self):
-        self.elements = []
         self.top = None
 
     def push(self, data):
         """
         Добавляет в стэк элемент в виде узла Node
         """
-        if len(self.elements) == 0:
-            new_node = Node(data)
-        else:
-            new_node = Node(data, self.top)
-        self.top = new_node
-        return self.elements.append(new_node)
+        next_node = self.top
+        new_top = Node(data, next_node)
+        self.top = new_top
+
 

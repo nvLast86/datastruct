@@ -1,6 +1,6 @@
 import unittest
 from utils.stack import Stack
-
+from utils.queue import Queue
 
 class test_data(unittest.TestCase):
     stack = Stack()
@@ -21,5 +21,15 @@ class test_data(unittest.TestCase):
         stack.push('data2')
         self.assertEqual(stack.pop(), 'data2')
 
+class TestQueue(unittest.TestCase):
+    def test_enqueue(self):
+        queue = Queue()
+        queue.enqueue('data1')
+        queue.enqueue('data2')
+        queue.enqueue('data3')
+        assert queue.head.data == 'data1'
+        assert queue.head.next_node.data == 'data2'
+        assert queue.tail.data == 'data3'
+        assert queue.tail.next_node is None
 
 

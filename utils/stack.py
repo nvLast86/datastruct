@@ -23,7 +23,9 @@ class Stack:
         """
         Удаляет и возвращает верхний элемент стэка
         """
-        remove = self.top
+        if self.top is None:
+            return None
+        value = self.top.data
         self.top = self.top.next_node
-        return remove.data
+        return value
 

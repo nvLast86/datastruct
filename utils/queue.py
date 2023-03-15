@@ -14,10 +14,9 @@ class Queue:
         Метод для добавления данных в очередь
         """
         new_node = Node(data)
-        if self.head = = None:
+        if self.head is None:
             self.head = new_node
             self.tail = new_node
         else:
             self.tail.next_node = new_node
             self.tail = new_node
-

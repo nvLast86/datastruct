@@ -2,6 +2,9 @@ from utils.node import Node
 
 
 class Queue:
+    """
+    Класс Queue ("Очередь"), инициализируется двумя аттрибутами: начало и конец очереди
+    """
     def __init__(self, head=None, tail=None):
         self.head = head
         self.tail = tail

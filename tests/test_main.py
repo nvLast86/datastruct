@@ -32,4 +32,15 @@ class TestQueue(unittest.TestCase):
         assert queue.tail.data == 'data3'
         assert queue.tail.next_node is None
 
+    def test_dequeue(self):
+        queue = Queue()
+        queue.enqueue('data1')
+        queue.enqueue('data2')
+        queue.enqueue('data3')
+        assert queue.dequeue() == 'data1'
+        assert queue.dequeue() == 'data2'
+        assert queue.dequeue() == 'data3'
+        assert queue.dequeue() is None
+
+
 

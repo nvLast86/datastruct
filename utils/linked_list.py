@@ -1,29 +1,28 @@
 from node import Node
 
 class LinkedList:
-    """
-    Класс, хранящий ссылку на начало связанного списка и на его конец,
-    т.е. на первый и последний Node
-    """
 
-    def __init__(self):
-        self.head = None
-        self.tail = None
+    def __init__(self, tail=None, head=None):
+        self.tail = tail
+        self.head = head
 
     def insert_beginning(self, data):
         new_node = Node(data)
-        if self.head is None and self.tail is None:
+        if self.head is None:
+            self.head = new_node
             self.tail = new_node
-        new_node.next_node = self.head
-        self.head = new_node
+        else:
+            new_node.next_node = self.head
+            self.head = new_node
 
     def insert_at_end(self, data):
-        new_node = Node()
-        if self.head is None and self.tail is None:
+        new_node = Node(data)
+        if self.head is None:
             self.head = new_node
+            self.tail = new_node
         else:
             self.tail.next_node = new_node
-        self.tail = new_node
+            self.tail = new_node
 
     def print_ll(self):
         ll_string = ''
@@ -36,6 +35,7 @@ class LinkedList:
 
         ll_string += ' None'
         print(ll_string)
+
 
 ll = LinkedList()
 ll.insert_beginning({'id': 1})

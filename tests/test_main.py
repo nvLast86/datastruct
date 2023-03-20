@@ -1,6 +1,7 @@
 import unittest
 from utils.stack import Stack
 from utils.queue import Queue
+from utils.linked_list import LinkedList
 
 class test_data(unittest.TestCase):
     stack = Stack()
@@ -41,6 +42,19 @@ class TestQueue(unittest.TestCase):
         assert queue.dequeue() == 'data2'
         assert queue.dequeue() == 'data3'
         assert queue.dequeue() is None
+
+
+class Linked_listtest(unittest.TestCase):
+
+    def test_print_ll(self):
+        ll = LinkedList()
+        ll.insert_beginning({'id': 1})
+        ll.insert_at_end({'id': 2})
+        ll.insert_at_end({'id': 3})
+        ll.insert_beginning({'id': 0})
+        self.assertEqual(ll.print_ll(), None)
+
+
 
 
 

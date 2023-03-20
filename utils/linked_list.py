@@ -1,12 +1,20 @@
 from node import Node
 
+
 class LinkedList:
+    """
+    Класс, хранящий ссылку на начало и конец связанного списка,
+    т.е. первый и последний Node
+    """
 
     def __init__(self, tail=None, head=None):
         self.tail = tail
         self.head = head
 
     def insert_beginning(self, data):
+        """
+        Принимает данные и добавляет узел с этими данными в начало связанного списка
+        """
         new_node = Node(data)
         if self.head is None:
             self.head = new_node
@@ -16,6 +24,9 @@ class LinkedList:
             self.head = new_node
 
     def insert_at_end(self, data):
+        """
+        Принимает данные и добавляет узел с этими данными в конец связанного списка
+        """
         new_node = Node(data)
         if self.head is None:
             self.head = new_node
@@ -25,6 +36,9 @@ class LinkedList:
             self.tail = new_node
 
     def print_ll(self):
+        """
+        Метод вывода данных из односвязанного списка
+        """
         ll_string = ''
         node = self.head
         if node is None:

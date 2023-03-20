@@ -1,4 +1,4 @@
-from node import Node
+from utils.node import Node
 
 
 class LinkedList:

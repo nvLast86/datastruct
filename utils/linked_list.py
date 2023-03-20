@@ -6,3 +6,4 @@ class LinkedList:
     т.е. на первый и последний Node
     """
 
+

@@ -1,26 +1,12 @@
 from utils.node import Node
 from utils.stack import Stack
+from utils.linked_list import LinkedList
 
-stack = Stack()
-stack.push('data1')
-data = stack.pop()
-
-# стэк стал пустой
-print(stack.top)
-
-# pop() удаляет элемент и возвращает данные удаленного элемента
-print(data)
-
-
-stack = Stack()
-stack.push('data1')
-stack.push('data2')
-data = stack.pop()
-
-# теперь последний элемента содержит данные data1
-print(stack.top.data)
-
-# данные удаленного элемента
-print(data)
+ll = LinkedList()
+ll.insert_beginning({'id': 1})
+ll.insert_at_end({'id': 2})
+ll.insert_at_end({'id': 3})
+ll.insert_beginning({'id': 0})
+ll.print_ll()
 
 

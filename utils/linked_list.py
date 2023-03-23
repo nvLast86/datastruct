@@ -50,15 +50,19 @@ class LinkedList:
         ll_string += ' None'
         print(ll_string)
 
-
-# ll = LinkedList()
-# ll.insert_beginning({'id': 1})
-# ll.insert_at_end({'id': 2})
-# ll.insert_at_end({'id': 3})
-# ll.insert_beginning({'id': 0})
-# ll.print_ll()
-
-
+    def to_list(self) -> list:
+        """
+        Возвращает список с данными, содержащимися в
+        односвязном списке LinkedList
+        """
+        output_data = []
+        while self.head:
+            output_data.append(self.head.data)
+            if self.head.next_node:
+                self.head = self.head.next_node
+            else:
+                break
+        return output_data
 
 
 

@@ -70,10 +70,13 @@ class LinkedList:
         значение которого равно переданному в метод значению
         """
         while self.head:
+            if isinstance(id, int) is False:
+                raise TypeError('Неверный формат данных')
             if self.head.data['id'] == id:
                 return self.head.data
             else:
                 self.head = self.head.next_node
+
 
 
 ll = LinkedList()
@@ -87,5 +90,5 @@ ll.insert_beginning({'id': 0, 'username': 'serebro'})
 # for item in lst: print(item)
 
 
-user_data = ll.get_data_by_id(2)
+user_data = ll.get_data_by_id(5)
 print(user_data)

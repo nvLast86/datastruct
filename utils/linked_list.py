@@ -64,6 +64,13 @@ class LinkedList:
                 break
         return output_data
 
+    def get_data_by_id(self, id):
+        while self.head:
+            if self.head.data['id'] == id:
+                return self.head.data
+            else:
+                self.head = self.head.next_node
+
 ll = LinkedList()
 
 ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
@@ -71,7 +78,9 @@ ll.insert_at_end({'id': 2, 'username': 'mik.roz'})
 ll.insert_at_end({'id': 3, 'username': 'mosh_s'})
 ll.insert_beginning({'id': 0, 'username': 'serebro'})
 
-lst = ll.to_list()
-for item in lst: print(item)
+# lst = ll.to_list()
+# for item in lst: print(item)
 
 
+user_data = ll.get_data_by_id(2)
+print(user_data)

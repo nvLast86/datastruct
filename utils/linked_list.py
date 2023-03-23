@@ -64,5 +64,14 @@ class LinkedList:
                 break
         return output_data
 
+ll = LinkedList()
+
+ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
+ll.insert_at_end({'id': 2, 'username': 'mik.roz'})
+ll.insert_at_end({'id': 3, 'username': 'mosh_s'})
+ll.insert_beginning({'id': 0, 'username': 'serebro'})
+
+lst = ll.to_list()
+for item in lst: print(item)
 
 

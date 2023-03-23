@@ -65,11 +65,16 @@ class LinkedList:
         return output_data
 
     def get_data_by_id(self, id):
+        """
+        Возвращает первый найденный в LinkedList словарь с ключом id,
+        значение которого равно переданному в метод значению
+        """
         while self.head:
             if self.head.data['id'] == id:
                 return self.head.data
             else:
                 self.head = self.head.next_node
+
 
 ll = LinkedList()
 

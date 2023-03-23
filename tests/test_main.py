@@ -2,6 +2,8 @@ import unittest
 from utils.stack import Stack
 from utils.queue import Queue
 from utils.linked_list import LinkedList
+from io import StringIO
+from contextlib import redirect_stdout
 
 class test_data(unittest.TestCase):
     stack = Stack()
@@ -57,4 +59,7 @@ class Linked_listtest(unittest.TestCase):
 
 
 
-
+        out = StringIO()
+        with redirect_stdout(out):
+            ll.print_ll()
+        self.assertEqual(out.getvalue().strip(), "{'id': 0} -> {'id': 1} -> {'id': 2} -> {'id': 3} -> None")

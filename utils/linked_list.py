@@ -72,10 +72,11 @@ class LinkedList:
         while self.head:
             if isinstance(id, int) is False:
                 raise TypeError('Неверный формат данных')
-            if self.head.data['id'] == id:
-                return self.head.data
             else:
-                self.head = self.head.next_node
+                if self.head.data['id'] == id:
+                    return self.head.data
+                else:
+                    self.head = self.head.next_node
 
 
 ll = LinkedList()
@@ -89,5 +90,5 @@ lst = ll.to_list()
 for item in lst: print(item)
 
 
-user_data = ll.get_data_by_id(3)
+user_data = ll.get_data_by_id('n')
 print(user_data)
